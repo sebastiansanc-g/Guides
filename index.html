@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <title>Haven Guides</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: #000;
       color: white;
       display: flex;
@@ -18,7 +20,11 @@
     h1 {
       text-align: center;
       margin: 15px 0;
-      font-size: 32px;
+      font-size: 38px;
+      font-weight: 800;
+      color: #a855f7;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px rgba(168,85,247,0.6);
     }
 
     .layout {
@@ -32,7 +38,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
     }
 
     .center {
@@ -40,38 +46,48 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
 
     iframe {
       width: 95%;
       height: 85%;
       border: none;
-      border-radius: 12px;
+      border-radius: 14px;
       background: #111;
+      display: none;
+    }
+
+    .logo {
+      width: 300px;
+      opacity: 0.95;
+      transition: 0.3s;
     }
 
     .btn {
-      width: 180px;
-      padding: 15px;
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border-radius: 12px;
+      width: 200px;
+      padding: 16px;
+      background: linear-gradient(135deg, #a855f7, #ffffff);
+      color: black;
+      border-radius: 14px;
       text-align: center;
       cursor: pointer;
       transition: 0.3s;
       font-size: 14px;
-      box-shadow: 0 0 15px rgba(255,255,255,0.05);
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(168,85,247,0.4);
     }
 
     .btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(135deg, #334155, #1e293b);
-      box-shadow: 0 0 20px rgba(255,255,255,0.15);
+      transform: scale(1.07);
+      box-shadow: 0 0 30px rgba(168,85,247,0.8);
     }
 
     .label {
-      font-size: 12px;
+      font-size: 13px;
       opacity: 0.7;
       margin-bottom: -10px;
+      color: #ccc;
     }
   </style>
 </head>
@@ -81,7 +97,7 @@
 
   <div class="layout">
 
-    <!-- IZQUIERDA (RANKS) -->
+    <!-- IZQUIERDA -->
     <div class="side">
       <div class="label">RANKS</div>
 
@@ -96,10 +112,11 @@
 
     <!-- CENTRO -->
     <div class="center">
-      <iframe id="viewer" src=""></iframe>
+      <img src="final_logo-1.png" id="logo" class="logo">
+      <iframe id="viewer"></iframe>
     </div>
 
-    <!-- DERECHA (STAFF) -->
+    <!-- DERECHA -->
     <div class="side">
       <div class="label">STAFF</div>
 
@@ -117,6 +134,8 @@
   <script>
     function loadDoc(url) {
       document.getElementById("viewer").src = url;
+      document.getElementById("viewer").style.display = "block";
+      document.getElementById("logo").style.display = "none";
     }
   </script>
 
