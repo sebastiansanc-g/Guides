@@ -13,15 +13,38 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-
-      /* 🎬 FONDO ESTILIZADO */
-      background: url('7590b091674eb2a9700ecec83dd528c9.gif') no-repeat center center;
-      background-size: contain;
-      background-color: black;
-
       color: white;
       height: 100vh;
       overflow: hidden;
+    }
+
+    /* 🎬 FONDO ANIMADO PRO */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background: url('e776007700b6a38c2848bfe333535d516de1ee06.gif') center/cover no-repeat;
+
+      filter: blur(8px) brightness(0.4) contrast(1.2);
+      z-index: -2;
+    }
+
+    /* 💜 OVERLAY MORADO */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background: rgba(106, 0, 255, 0.15);
+
+      z-index: -1;
     }
 
     .title {
@@ -31,7 +54,7 @@
       text-align: center;
       font-size: 42px;
       font-weight: 800;
-      color: #8b3dff;
+      color: #a855f7;
       text-shadow: 0 0 25px #6a00ff;
     }
 
@@ -104,7 +127,7 @@
         [ESP] Disabled Services Guide
       </div>
 
-      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1RBmuicXwjWJVxyGsf2DIOqxA1DGuNjJgEnHGOjdAutE/preview','_blank')">
+      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1RBmuicXwjWJVxyGsf2DIOqxA1DGuNjGEnHGOjdAutE/preview','_blank')">
         [ESP] Staff Guide
       </div>
     </div>
