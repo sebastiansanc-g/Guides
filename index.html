@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Haven Guides</title>
+  <title>Haven Staff Guides</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -12,37 +12,45 @@
       font-family: 'Poppins', sans-serif;
       background: #000;
       color: white;
-      display: flex;
-      flex-direction: column;
       height: 100vh;
+      overflow: hidden;
     }
 
-    h1 {
+    /* TITULO */
+    .title {
+      position: absolute;
+      top: 150px;
+      width: 100%;
       text-align: center;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-size: 40px;
+      font-size: 42px;
       font-weight: 800;
       color: #a855f7;
-      text-shadow: 0 0 20px rgba(168,85,247,0.7);
+      text-shadow: 0 0 25px rgba(168,85,247,0.8);
     }
 
     .layout {
       display: flex;
-      flex: 1;
+      height: 100%;
     }
 
+    /* LADOS MÁS CERCA DEL CENTRO */
     .side {
-      width: 25%; /* antes 20% */
+      width: 30%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      gap: 35px;
+      align-items: flex-end;
+      gap: 40px;
+      padding: 0 20px;
     }
 
+    .side.right {
+      align-items: flex-start;
+    }
+
+    /* CENTRO MÁS COMPACTO */
     .center {
-      width: 50%; /* antes 60% */
+      width: 40%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,8 +58,8 @@
     }
 
     iframe {
-      width: 95%;
-      height: 85%;
+      width: 100%;
+      height: 80%;
       border: none;
       border-radius: 14px;
       background: #111;
@@ -63,29 +71,30 @@
       opacity: 0.95;
     }
 
+    /* BOTONES MÁS PRO */
     .btn {
-      width: 230px;
+      width: 240px;
       padding: 18px;
       background: linear-gradient(135deg, #a855f7, #ffffff);
       color: black;
-      border-radius: 16px;
+      border-radius: 18px;
       text-align: center;
       cursor: pointer;
       transition: 0.3s;
       font-size: 14px;
       font-weight: 600;
-      box-shadow: 0 0 25px rgba(168,85,247,0.5);
+      box-shadow: 0 0 25px rgba(168,85,247,0.6);
     }
 
     .btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 35px rgba(168,85,247,0.9);
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(168,85,247,1);
     }
   </style>
 </head>
 <body>
 
-  <h1>Haven Guides</h1>
+  <h1 class="title">Haven Staff Guides</h1>
 
   <div class="layout">
 
@@ -111,7 +120,7 @@
     </div>
 
     <!-- DERECHA -->
-    <div class="side">
+    <div class="side right">
       <div class="btn" onclick="loadDoc('https://docs.google.com/document/d/1RBmuicXwjWJVxyGsf2DIOqxA1DGuNjJgEnHGOjdAutE/preview')">
         [ESP] Staff Guide
       </div>
