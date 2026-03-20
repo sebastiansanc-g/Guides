@@ -16,7 +16,6 @@
       overflow: hidden;
     }
 
-    /* TITULO */
     .title {
       position: absolute;
       top: 150px;
@@ -33,7 +32,6 @@
       height: 100%;
     }
 
-    /* LADOS MÁS CERCA DEL CENTRO */
     .side {
       width: 30%;
       display: flex;
@@ -48,22 +46,11 @@
       align-items: flex-start;
     }
 
-    /* CENTRO MÁS COMPACTO */
     .center {
       width: 40%;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-    }
-
-    iframe {
-      width: 100%;
-      height: 80%;
-      border: none;
-      border-radius: 14px;
-      background: #111;
-      display: none;
     }
 
     .logo {
@@ -71,7 +58,6 @@
       opacity: 0.95;
     }
 
-    /* BOTONES MÁS PRO */
     .btn {
       width: 240px;
       padding: 18px;
@@ -100,49 +86,40 @@
 
     <!-- IZQUIERDA -->
     <div class="side">
-      <div class="btn" onclick="loadDoc('https://docs.google.com/document/d/1e4u3n29qw3avHxDVMx-0ondeAHhZJ5N4UJt_1lxP5v4/preview')">
+      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1e4u3n29qw3avHxDVMx-0ondeAHhZJ5N4UJt_1lxP5v4/preview','_blank')">
         [ESP] Ranks Guide
       </div>
 
-      <div class="btn" onclick="loadDoc('https://docs.google.com/document/d/1Fhn8Ptubv6v_bug9gnoeAOyduOmRtxJPOZcwpyTTlOc/preview')">
+      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1Fhn8Ptubv6v_bug9gnoeAOyduOmRtxJPOZcwpyTTlOc/preview','_blank')">
         [ENG] Ranks Guide
       </div>
 
-      <div class="btn" onclick="loadDoc('https://docs.google.com/document/d/1R4Ar94kxa-JpuwY6MMjyCy4Upn8A9C_g3y9Q8_f2CoA/preview')">
+      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1R4Ar94kxa-JpuwY6MMjyCy4Upn8A9C_g3y9Q8_f2CoA/preview','_blank')">
         [ESP] Disabled Services Guide
       </div>
     </div>
 
     <!-- CENTRO -->
     <div class="center">
-      <img src="final_logo-1.png" id="logo" class="logo">
-      <iframe id="viewer"></iframe>
+      <img src="final_logo-1.png" class="logo">
     </div>
 
     <!-- DERECHA -->
     <div class="side right">
-      <div class="btn" onclick="loadDoc('https://docs.google.com/document/d/1RBmuicXwjWJVxyGsf2DIOqxA1DGuNjJgEnHGOjdAutE/preview')">
+      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1RBmuicXwjWJVxyGsf2DIOqxA1DGuNjJgEnHGOjdAutE/preview','_blank')">
         [ESP] Staff Guide
       </div>
 
-      <div class="btn" onclick="loadDoc('https://docs.google.com/document/d/1KQqM_dcDfT7kvxHq9UahjMafbES53sVYR19HXupoZuM/preview')">
+      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1KQqM_dcDfT7kvxHq9UahjMafbES53sVYR19HXupoZuM/preview','_blank')">
         [ENG] Staff Guide
       </div>
 
-      <div class="btn" onclick="loadDoc('https://docs.google.com/document/d/1V32U32VPpGX2KgUTVfG1kdpiBhQEvikRwRHI2QKWwTs/preview')">
+      <div class="btn" onclick="window.open('https://docs.google.com/document/d/1V32U32VPpGX2KgUTVfG1kdpiBhQEvikRwRHI2QKWwTs/preview','_blank')">
         [ENG] Disabled Services Guide
       </div>
     </div>
 
   </div>
-
-  <script>
-    function loadDoc(url) {
-      document.getElementById("viewer").src = url;
-      document.getElementById("viewer").style.display = "block";
-      document.getElementById("logo").style.display = "none";
-    }
-  </script>
 
 </body>
 </html>
