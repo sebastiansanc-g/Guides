@@ -2,14 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mis Documentos</title>
+  <title>Haven Guides</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px;
+      font-size: 32px;
+    }
+
+    .buttons {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #333;
+    }
+
+    iframe {
+      width: 90%;
+      height: 75vh;
+      border: none;
+      border-radius: 10px;
+      background: #111;
+    }
+  </style>
 </head>
 <body>
-  <h1>Mis documentos</h1>
 
-  <ul>
-    <li><a href="#">Documento 1</a></li>
-  </ul>
+  <h1>Haven Guides</h1>
+
+  <div class="buttons">
+    <button class="btn" onclick="loadDoc('https://docs.google.com/document/d/1KQqM_dcDfT7kvxHq9UahjMafbES53sVYR19HXupoZuM/preview')">[ENG] Staff Guide</button>
+    
+    <button class="btn" onclick="loadDoc('https://docs.google.com/document/d/1RBmuicXwjWJVxyGsf2DIOqxA1DGuNjJgEnHGOjdAutE/preview')">[ESP] Staff Guide</button>
+    
+    <button class="btn" onclick="loadDoc('https://docs.google.com/document/d/1e4u3n29qw3avHxDVMx-0ondeAHhZJ5N4UJt_1lxP5v4/preview')">[ESP] Ranks Guide</button>
+    
+    <button class="btn" onclick="loadDoc('https://docs.google.com/document/d/1Fhn8Ptubv6v_bug9gnoeAOyduOmRtxJPOZcwpyTTlOc/preview')">[ENG] Ranks Guide</button>
+  </div>
+
+  <iframe id="viewer" src=""></iframe>
+
+  <script>
+    function loadDoc(url) {
+      document.getElementById("viewer").src = url;
+    }
+  </script>
 
 </body>
 </html>
